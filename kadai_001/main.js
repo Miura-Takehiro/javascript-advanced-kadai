@@ -34,8 +34,8 @@ const textLists = [
 // ランダムなテキストを表示
 const createText = () => {
   // タイピング数をクリア
-  typingCount = 0; // タイピング数を0にリセット
-  typingCountElement.textContent = ''; // タイピング数の表示もクリア
+  // typingCount = 0; // タイピング数を0にリセット
+  // typingCountElement.textContent = ''; // タイピング数の表示もクリア
   // 正タイプした文字列をクリア
   typed = '';
   typedfield.textContent = typed;
@@ -65,7 +65,7 @@ const keyPress = e => {
   typedfield.textContent = typed;
   untypedfield.textContent = untyped;
   // タイピングした文字数をカウント
-  typingCountElement.textContent = typed.length;
+  typingCountElement.textContent = typingCount;
 
   // テキストがなくなったら新しいテキストを表示
   if (untyped === '') {
